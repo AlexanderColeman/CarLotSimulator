@@ -7,7 +7,7 @@ namespace CarLotSimulator
     {
         static void Main(string[] args)
         {
-            List<Car> carLot = new List<Car>();
+            var myCarLot = new CarLotApp();
             //TODO
 
             //Create a seperate class file called Car
@@ -31,7 +31,7 @@ namespace CarLotSimulator
             car1.MakeEngineNoise(car1.EngineNoise);
             car1.MakeHonkNoise(car1.HonkNoise);
 
-            carLot.Add(car1);
+            myCarLot.carLot.Add(car1);
 
 
             Car car2 = new Car()
@@ -46,7 +46,7 @@ namespace CarLotSimulator
             car2.MakeEngineNoise(car2.EngineNoise);
             car2.MakeHonkNoise(car2.HonkNoise);
 
-          carLot.Add(car2);                                                         
+            myCarLot.carLot.Add(car2);                                                         
 
 
             Car car3 = new Car(1964, "Ford", "Mustang", "roar", "Beep Beep" );
@@ -54,7 +54,7 @@ namespace CarLotSimulator
             car3.MakeEngineNoise(car3.EngineNoise);
             car3.MakeHonkNoise(car3.HonkNoise);
 
-            carLot.Add(car3);
+            myCarLot.carLot.Add(car3);
 
             //*************BONUS*************//
 
@@ -67,10 +67,10 @@ namespace CarLotSimulator
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
 
-            for(int i = 0; i < carLot.Count; i++)
+            for(int i = 0; i < myCarLot.carLot.Count; i++)
             {
-                Console.WriteLine($"The {i+1}st Car in our car lot is a {carLot[i].Make} {carLot[i].Model}." +
-                    $" This car was build in the year {carLot[i].Year}. ");
+                Console.WriteLine($"The {i+1}st Car in our car lot is a {myCarLot.carLot[i].Make} {myCarLot.carLot[i].Model}." +
+                    $" This car was build in the year {myCarLot.carLot[i].Year}. ");
             }
         }
     }
